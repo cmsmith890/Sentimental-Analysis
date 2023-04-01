@@ -1,0 +1,6 @@
+Please install the following packages from this code:
+ nlp
+ movie_reviews
+ scikit-learn
+ csv
+ pylance
