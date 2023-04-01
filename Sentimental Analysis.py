@@ -4,7 +4,7 @@ import csv
 import pandas as pd
 
 
-with open('IMDB_dataset_320.000_reviews.csv', mode="r") as csv_file: 
+with open('IMDB_dataset_320.000_reviews.csv.7z.7z.001', mode="r") as csv_file: 
     reader = csv.reader(csv_file) 
 
     for item in reader:
