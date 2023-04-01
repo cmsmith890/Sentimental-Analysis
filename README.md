@@ -7,8 +7,8 @@ The packages installed are as follows:
  nlp
  movie_reviews
  scikit-learn
- csv
  pylance
+ numby
 
 Features in the project include:
 -use of a CSV file
