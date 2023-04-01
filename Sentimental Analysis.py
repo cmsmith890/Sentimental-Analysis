@@ -32,7 +32,7 @@ for x in range(len(feature_vector)):
  [x for x in feature_vector 
   if feature[x] == True]
  document = [(movie_reviews.words(file_id),category) 
-             for file_id in movie_reviews.fileids() 
+             for file_id in movie_reviews.fileids()
              for category in movie_reviews.categories(file_id)]
  
  find_feature(document[0][0])
