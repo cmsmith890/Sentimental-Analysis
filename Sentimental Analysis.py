@@ -2,9 +2,10 @@ import nltk
 import movie_reviews
 import csv
 import pandas as pd
+import Pylance
+import dictionary as dict
 
-
-with open('IMDB_dataset_320.000_reviews.csv.7z.7z.001', mode="r") as csv_file: 
+with open('IMDB_dataset_320.000_reviews.csv', mode="r") as csv_file: 
     reader = csv.reader(csv_file) 
 
     for item in reader:
@@ -25,16 +26,16 @@ movie_reviews.words('neg/textword_1.txt')
 all_words = nltk.FreqDist(movie_reviews.words())
 feature_vector = list(all_words)[:4000]
 def find_feature(word_list):
-feature = {}
+ dict feature = {}
 review = movie_reviews.words('neg/textword_2.txt')
 for x in range(len(feature_vector)):
  feature[feature_vector[x]] = feature_vector[x] in review
  [x for x in feature_vector 
   if feature[x] == True]
  document = [(movie_reviews.words(file_id),category) 
-             for file_id in movie_reviews.fileids()
+             for file_id in movie_reviews.fileids() 
              for category in movie_reviews.categories(file_id)]
- 
+
  find_feature(document[0][0])
  feature_sets = [(find_feature(word_list),category) 
                  for (word_list,category) in document]
@@ -47,4 +48,4 @@ print(len(test_set))
 model = SklearnClassifier(SVC(kernel = 'linear'))
 model.train(train_set)
 accuracy = nltk.classify.accuracy(model, test_set)
-print('VC Accuracy : {}'.format(accuracy))
+print(f'VC Accuracy : {accuracy}')
