@@ -28,12 +28,12 @@ def find_feature(word_list):
         feature = {}
 review = movie_reviews.words('neg/textword_2.txt')
 for x in range(len(feature_vector)):
-  [feature_vector[x]] = feature_vector[x] in review
-  [x for x in feature_vector] 
-  if feature[x] == True:
-        document = [(movie_reviews.words(file_id),category) 
-             for file_id in movie_reviews.fileids() 
-             for category in movie_reviews.categories(file_id)]
+    [feature_vector[x]] = feature_vector[x] in review
+    list(feature_vector)
+    if feature[x] == True:
+          document = [(movie_reviews.words(file_id),category) 
+               for file_id in movie_reviews.fileids() 
+               for category in movie_reviews.categories(file_id)]
 
 find_feature(document[0][0])
 feature_sets = [(find_feature(word_list),category) 
